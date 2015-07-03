@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -16,9 +17,30 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    /* int screenHeight = [UIScreen mainScreen].bounds.size.height;
+    NSLog(@"Screen Height is %i", screenHeight); */
+    
+    
+[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"upperpart.png"] forBarMetrics:UIBarMetricsDefault];
+ 
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    // parse stuff
+    [Parse enableLocalDatastore];
+    
+    // parse keys (client and appid)
+    [Parse setApplicationId:@"9HZ7YpqboqbEiBlJwDYVNbS7gi84tYM220BIQy7n"
+                  clientKey:@"QeT02o6A7zIOTVYKpBtl0AedjXKJh3IfedXihHTM"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    
     return YES;
+
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

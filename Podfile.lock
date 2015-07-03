@@ -1,0 +1,22 @@
+PODS:
+  - CBZSplashView (1.0.0)
+  - ContextMenu.iOS (1.0.0)
+  - DBCamera (2.3.16):
+    - GPUImage (~> 0.1)
+  - GPUImage (0.1.6)
+  - REFrostedViewController (2.4.8)
+
+DEPENDENCIES:
+  - CBZSplashView (~> 1.0.0)
+  - ContextMenu.iOS (~> 1.0.0)
+  - DBCamera (~> 2.3)
+  - REFrostedViewController (~> 2.4)
+
+SPEC CHECKSUMS:
+  CBZSplashView: 9ce4cba22024476ff4a97d6433e7347da6376016
+  ContextMenu.iOS: 7da78b3f99e604669b75e55146c6c33147f64f99
+  DBCamera: c88a0deea468d153f54196e56a423301c7092737
+  GPUImage: 4675ce4a5370ca92fcea8623b2a08b8f0c51b940
+  REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
+
+COCOAPODS: 0.37.2
