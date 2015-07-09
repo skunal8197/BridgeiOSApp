@@ -7,6 +7,8 @@
 //
 
 #import "ProfilePictureViewController.h"
+#import "TestViewController.h"
+#import "FeedViewController.h"
 
 
 @interface ProfilePictureViewController ()
@@ -93,10 +95,11 @@
 
 - (IBAction)next:(id)sender {
     
-    if (self.imageView.image) {
+   // if (self.imageView.image) {
         
-       
-        NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
+        //[self performSegueWithIdentifier:@"next" sender:self];
+        
+       /* NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
         PFFile *photoFile = [PFFile fileWithData:imageData];
         PFObject *photo = [PFObject objectWithClassName:@"User"];
         photo [@"profilepic"] = photoFile;
@@ -109,10 +112,10 @@
     }
         else {
             [self showError];
-                    }
+                    }*/
         
    
-    }
+}
 
 
     
@@ -121,6 +124,28 @@
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Could not post your photo, please try again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
+//-----------------------------------PREPARE FOR SEGUE ********SUPER IMPORTANT**********------------------------------------
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"next"]) {
+        FeedViewController *destViewController = segue.destinationViewController;
+        //destViewController.feedtext = @"It fucking worked";
+        NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
+        PFFile *photoFile = [PFFile fileWithData:imageData];
+        PFObject *photo = [PFObject objectWithClassName:@"User"];
+        photo [@"profilepic"] = photoFile;
+        photo [@"username"] = [PFUser currentUser];
+        [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!succeeded) {
+                [self showError];
+            }
+        }];
+    }
+    else {
+        [self showError];
+    }
+}
+    
+    
 
 
 

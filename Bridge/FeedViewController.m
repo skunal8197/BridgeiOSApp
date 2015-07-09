@@ -28,12 +28,12 @@ YALContextMenuTableViewDelegate
 #pragma mark - View Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initiateMenuOptions];
+    //[self initiateMenuOptions];
     
     // set custom navigationBar with a bigger height
-    [self.navigationController setValue:[[YALNavigationBar alloc]init] forKeyPath:@"navigationBar"];
+    //[self.navigationController setValue:[[YALNavigationBar alloc]init] forKeyPath:@"navigationBar"];
 }
-
+/*
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
