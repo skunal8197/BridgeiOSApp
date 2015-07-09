@@ -361,6 +361,7 @@
                                 </state>
                                 <connections>
                                     <action selector="next:" destination="CHU-nP-hPw" eventType="touchUpInside" id="0eZ-oo-B1J"/>
+                                    <segue destination="fqC-Jd-Cec" kind="push" identifier="next" id="HkF-On-l6F"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -374,6 +375,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52z-Ae-aEJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="64" y="77"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="ahh-04-cYT">
+            <objects>
+                <viewController id="fqC-Jd-Cec" customClass="FeedViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EHB-Ny-4iY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YGk-Nf-g0k">
+                                <rect key="frame" x="139" y="273" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bTk-SN-eg8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W08-aM-L8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="77"/>
         </scene>
         <!--Splash Screen View Controller-->
         <scene sceneID="I7L-2t-9Bl">
